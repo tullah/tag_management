@@ -1,12 +1,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
-
-#tag_table {
-    margin: auto;
-    width: 50%;
-}
-
+/* wrapper for the body */
 .wrapper {
     margin: auto;
     width: 60%;
@@ -15,19 +10,44 @@ body {
     text-align: center;
 }
 
+
+/* adjust the tag table */
+#tag_table {
+    margin: auto;
+    width: 50%;
+}
+
+#view_tags {
+    height: 500px;
+    overflow: scroll;
+    margin: auto;
+    padding-top: 20px;
+}
+
+#view_tags th {
+    font-size: 20px;
+}
+
+
+/* adjust the title */
 #title {
     text-align: center;
 }
 
+/* adjust the database connection message */
 #db_connect {
     background-color: green;
     color: white;
     padding: 20px;
 }
 
-#view_tags {
-    height: 500px;
-    overflow: scroll;
+
+
+/* adjust the empty database message */
+#empty_db_message {
+    background-color: red;
+    color: white;
+    padding: 10px;
     margin: 20px;
 }
 

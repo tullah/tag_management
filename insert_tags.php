@@ -8,9 +8,11 @@ if (isset($_POST['user_input'])) { //if the user inputs a value into the text bo
 
     //this if statement block catches possible mistakes in the entering of data.
     if (is_null($user_input)) {
+        //use javascript for popup output
         echo '<script>alert("That was a null string, please enter proper data")</script>';
         exit;
     } elseif ($user_input == "") {
+        //use javascript for popup output
         echo '<script>alert("That was an empty string, please enter proper data")</script>';
         exit;
     }
@@ -23,6 +25,7 @@ if (isset($_POST['user_input'])) { //if the user inputs a value into the text bo
     //use mysqli_query to execute sql string.
     if (mysqli_query($link, $sql)) {
         echo "New record created successfully";
+        header('Location: index.php'); //reload the page
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($link);
     }
